@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import "../styles/header.css";
-import nowayVideo from "../assets/noway.mp4";
-import migrationVideo from "../assets/migration.mp4";
+import HeaderAbMovieInfo from './HeaderAbMovieInfo';
+import HeaderAbMovieCarousel from './HeaderAbMovieCarousel';
+import HeaderCard from './HeaderCard';
+
 
 const Header = () => {
-  const [videoSrc, setVideoSrc] = useState(nowayVideo);
 
-  const handleVideoEnded = () => {
-    setVideoSrc(migrationVideo);
-  };
 
   return (
     <div className="header">
-      <video src={videoSrc} className="innerHeader" autoPlay muted loop onEnded={handleVideoEnded} />
+      <HeaderCard />
     </div>
   );
 };
