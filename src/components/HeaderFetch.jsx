@@ -1,30 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-function HeaderFetch({ movieId, children }) {
-  const [movieDetails, setMovieDetails] = useState(null);
+function HeaderFetch({ children }) {
+  const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    const apiKey = 'cd6592beb58e675d2cb6fdf038c87822';
-
-    const fetchMovieDetails = async () => {
+    const fetchMovies = async () => {
       try {
+        const apiKey = 'cd6592beb58e675d2cb6fdf038c87822';
         const response = await axios.get(
-          `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`
+          `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`
         );
-        setMovieDetails(response.data);
+        setMovies(response.data.results);
       } catch (error) {
-        console.error('Error fetching movie details:', error);
+        console.error('Error fetching movies:', error);
       }
     };
 
-    fetchMovieDetails();
-  }, [movieId]);
+    fetchMovies();
+  }, []);
 
   return (
     <div>
-      {movieDetails && children(movieDetails)}
-    </div>
+    {typeof children === 'function' && children(movies)}
+  </div>
   );
 }
 
