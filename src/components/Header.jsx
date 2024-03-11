@@ -4,14 +4,15 @@ import HeaderCard from './HeaderCard';
 import HeaderFetch from './HeaderFetch';
 import HeaderCarousel from './HeaderCarousel';
 import HeaderInfo from './HeaderInfo';
+import ErrorBoundary from './ErrorBoundary';
 
 const Header = () => {
   return (
-    <div className="header">
-     <HeaderFetch>
-      {movies => <HeaderCarousel movies={movies} />} {/* Make sure you pass movies as a prop */}
+    <ErrorBoundary>
+    <HeaderFetch>
+      {movies => <HeaderCarousel movies={movies} />}
     </HeaderFetch>
-    </div>
+  </ErrorBoundary>
   );
 };
 
