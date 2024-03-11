@@ -22,8 +22,8 @@ function HeaderFetch({ children }) {
 
   return (
     <div>
-    {typeof children === 'function' && children(movies)}
-  </div>
+      {children && children(movies)}
+    </div>
   );
 }
 

@@ -6,19 +6,19 @@ import '../styles/headerCarousel.css';
 import HeaderCard from './HeaderCard';
 
 function HeaderCarousel({ movies }) {
-  const sliderRef = useRef(null); // Reference to the Slider component
+  const sliderRef = useRef(null); 
 
   const handleNext = () => {
-    sliderRef.current.slickNext(); // Move to the next slide
+    sliderRef.current.slickNext(); 
   };
 
   const handlePrev = () => {
-    sliderRef.current.slickPrev(); // Move to the previous slide
+    sliderRef.current.slickPrev(); 
   };
 
   const calculateSlidesToShow = () => {
     const smallWidth = window.innerWidth;
-    return smallWidth > 1200 ? 4.5 : 3.3;
+    return smallWidth > 1200 ? 5 : 3.3;
   };
 
   const settings = {
