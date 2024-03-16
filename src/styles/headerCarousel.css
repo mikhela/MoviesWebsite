@@ -2,6 +2,34 @@
 .carousel-container {
     margin: 0 auto;
     width: 90%;
-    height: 500px;
+    height: 350px;
+    position: relative;
   }
   
+  .Slider--buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+  
+  .prev,
+  .next {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-color: white;
+    max-width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .prev {
+    background-image: url('../assets/arrow-left-solid.svg');
+  }
+  
+  .next {
+    background-image: url('../assets/arrow-right-solid.svg');
+  }
