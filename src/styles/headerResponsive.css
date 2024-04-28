@@ -1,29 +1,132 @@
+@media only screen and (max-width: 1600px)
+{
+  .GenreMCOntainer {
+    max-width: 1100px !important;
+  }
+  
+}
+
+@media only screen and (max-width: 1120px)
+{
+  .GenreMCOntainer {
+     max-width: 657px !important;
+  }
+}
 @media only screen and (max-width: 1020px)
 {
-    .header--info{ max-width: 300px; height: 350px;} .information{font-size: 15px;} 
+  .information__Container
+  {
+    width: 600px !important; 
+    height: 450px !important;
+  }
+  .information__Container .content_right #title
+  {
+      font-size: 16px;
+  }
+  .information__Container .content_right #overview
+  {
+      font-size: 12px;
+      margin-top: 15px;
+  }
+  .information__Container .content_right_mininfo 
+  {
+    font-size: 11px;
+    margin-top: 30px;
+  }
+  .information__Container .content_right_mininfo  #imdb
+  {
+      padding: 1.5px;
+  }
+  .header__container
+  {
+    width: 800px;
+
+  }
+  .Navbar__Container
+  {
+    width: 800px !important;
+  }
+  .header--info{ max-width: 300px; height: 350px;} .information{font-size: 15px;} 
+  .header-card {width: 150px;height: 250px;}
+  .carousel-container {top: 40px;}
 }
 
 @media only screen and (max-width: 750px)
-{
-  .header-card {
-    width: 135px;
+{  
+  .information__Container
+  {
+    width: 450px !important; 
+    height: 400px !important;
+  }
+  .information__Container .content_right #title
+  {
+      font-size: 14px;
+  }
+  .information__Container .content_right #overview
+  {
+      font-size: 10px;
+  }
+  .information__Container .content_right_mininfo 
+  {
+    font-size: 9px;
+  }
+
+  .header__container
+  {
+    width: 500px;
+  }
+  .Navbar__Container
+  {
+    width: 500px !important;
+  }
+  .GenreMCOntainer {
+    max-width: 500px !important;
+ }
+ .Genrename{font-size: 22px;}
+ .GenreMCOntainer .movieCard{ width: 150px;}
+ .movieInfo p {  font-size: 12px;}
+
+ .GenreMCOntainer .movieCard img {width: 150px;}
+ .header-card {
+    width: 125px;
     max-width: 100%;
     height: 230px;
 }
-.header--info {max-width: 250px; height: 300px; left: 35px;}
+.header--info #title {font-size: 16px;}
+.header--info .overview {font-size: 13px;}
+.information .innerBox {font-size: 12px;}  
+.header--info {max-width: 250px; height: 300px; left: 35px; top: -10px;}
 .carousel-container {
-    margin: 0 auto;
     width: 90%;
-    height: 290px;
-    position: relative;
-    margin-top: 30px;
 }
 }
 
 @media only screen and (max-width: 540px)
 {
-  .carousel-container {height: 250px;}
-  .header--info {left: 20px;}
+  .information__Container
+  {
+    width: 400px !important; 
+    height: 350px !important;
+    top: 55% !important;
+  }
+
+  .header__container
+  {
+    width: 400px;
+  }
+  .Navbar__Container
+  {
+    width: 400px !important;
+  }
+  .GenreMCOntainer {
+    max-width: 330px !important;
+ }
+  .GenreMCOntainer .Genrename{font-size: 20px !important;}
+  .header--info #title {font-size: 14px;}
+  .header--info .overview {font-size: 10px;}
+  .information .innerBox {font-size: 11px;}  
+  .carousel-container { width: 80%; }
+  .header--info {top: 40px;}
   .header-card {
     width: 90px;
     max-width: 100%;

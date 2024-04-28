@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useFetch from './useFetch';
-import '../styles/headerInfo.css'
+import '../styles/HeaderInfo.css'
 
 function HeaderInfo() {
   const [movieIndex, setMovieIndex] = useState(0);
@@ -23,11 +23,10 @@ function HeaderInfo() {
   }
 
   const movie = movies[movieIndex];
-
   return (
     <div className="header--info">
     <div className="information">
-      <h2>{movie.title}</h2>
+      <h2 id='title'>{movie.title}</h2>
       <p className='overview'>{movie.overview}</p>
       <div className="innerBox">
         <p id='vote'><span id='imdb'>IMDb</span> {movie.vote_average}</p>

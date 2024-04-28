@@ -2,11 +2,12 @@ import React, { useRef } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../styles/headerCarousel.css';
+import '../styles/HeaderCarousel.css';
 import HeaderCard from './HeaderCard';
 import useFetch from './useFetch'; 
 import '../assets/arrow-left-solid.svg'
 import '../assets/arrow-right-solid.svg'
+
 function HeaderCarousel() {
   const { data: movies, isLoading, error } = useFetch('https://api.themoviedb.org/3/discover/movie?api_key=cd6592beb58e675d2cb6fdf038c87822');
 
@@ -26,7 +27,7 @@ function HeaderCarousel() {
 
   const calculateSlidesToShow = () => {
     const smallWidth = window.innerWidth;
-    return smallWidth > 1200 ? 5.2   : 3.3;
+    return smallWidth > 1200 ? 5.2   : 3.1;
   };
 
   const settings = {
@@ -54,10 +55,6 @@ function HeaderCarousel() {
           ))}
         </Slider>
       )}
-      <div className="Slider--buttons">
-        <button className="prev" onClick={handlePrev}></button>
-        <button className="next" onClick={handleNext}></button>
-      </div>
     </div>
   );
 }

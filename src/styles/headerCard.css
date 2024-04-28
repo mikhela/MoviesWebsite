@@ -4,7 +4,6 @@
   height: 290px;
   display: flex;
   align-items: center;
-  border: 1px solid #ccc;
   border-radius: 18px;
   position: relative;
   overflow: hidden;
@@ -49,7 +48,7 @@
 
 .header-card:hover .details h2,
 .header-card:hover .details p {
-  transform: translateX(0); 
+  transform: translateX(-10px); 
   transition-delay: 0.3s; 
   opacity: 1;
 }
