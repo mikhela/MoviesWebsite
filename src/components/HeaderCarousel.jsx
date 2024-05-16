@@ -13,17 +13,7 @@ function HeaderCarousel() {
 
   const sliderRef = useRef(null); 
 
-  const handleNext = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickNext(); 
-    }
-  };
-
-  const handlePrev = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickPrev(); 
-    }
-  };
+  
 
   const calculateSlidesToShow = () => {
     const smallWidth = window.innerWidth;

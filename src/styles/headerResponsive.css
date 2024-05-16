@@ -62,17 +62,32 @@
   .header__container
   {
     width: 800px;
-
   }
   .Navbar__Container
   {
     width: 800px !important;
   }
-  .header--info{ max-width: 300px; height: 350px;} .information{font-size: 15px;} 
+  .header--info{ max-width: 300px !important; height: 250px !important;  overflow-y: hidden;} .information{font-size: 13px;} 
   .header-card {width: 150px;height: 250px;}
-  .carousel-container {top: 40px;}
+  .carousel-container { height: 270px;}
 }
+@media only screen and (max-width: 865px)
+{
+  .header__container
+  {
+    width: 500px;
+  }
+  .header-card {
+    width: 125px;
+    max-width: 100%;
+    height: 230px;
+}
+.header--info #title {font-size: 16px;}
+.header--info .overview {font-size: 13px;}
+.information .innerBox {font-size: 12px;}  
+.header--info {max-width: 250px; height: 300px; left: 35px; top: -10px;}
 
+}
 @media only screen and (max-width: 750px)
 {  
   .MoviesPage__container
@@ -97,10 +112,7 @@
     font-size: 9px;
   }
 
-  .header__container
-  {
-    width: 500px;
-  }
+ 
   .Navbar__Container
   {
     width: 500px !important;
@@ -113,18 +125,8 @@
  .movieInfo p {  font-size: 12px;}
 
  .GenreMCOntainer .movieCard img {width: 150px;}
- .header-card {
-    width: 125px;
-    max-width: 100%;
-    height: 230px;
-}
-.header--info #title {font-size: 16px;}
-.header--info .overview {font-size: 13px;}
-.information .innerBox {font-size: 12px;}  
-.header--info {max-width: 250px; height: 300px; left: 35px; top: -10px;}
-.carousel-container {
-    width: 90%;
-}
+
+
 }
 
 @media only screen and (max-width: 540px)
@@ -155,7 +157,7 @@
   .header--info #title {font-size: 14px;}
   .header--info .overview {font-size: 10px;}
   .information .innerBox {font-size: 11px;}  
-  .carousel-container { width: 80%; }
+  .carousel-container { width: 100%; }
   .header--info {top: 40px;}
   .header-card {
     width: 90px;

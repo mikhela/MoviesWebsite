@@ -11,9 +11,9 @@
 {
     width: 1500px;
     max-width: 100%;
-    min-height: 80vh;
+    height: 80vh;
     position: fixed;
-    bottom: 0;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
 }

@@ -2,9 +2,9 @@
 {
     max-width: 400px;
     height: 400px;
-    position: relative;
+    position: fixed;
     color: white;
-    top: 30px;
+    top: 0px;
 }
 
 .information
