@@ -1,30 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../styles/HeaderMoviesByGenres.css"
-import { Link } from 'react-router-dom';
-const useFetch = (genreIds) => {
-  const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-  
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=cd6592beb58e675d2cb6fdf038c87822&with_genres=${genreIds}`);
-        setData(response.data.results);
-      } catch (error) {
-        setError(error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchData();
-  }, [genreIds]);
-
-  return { data, isLoading, error };
-};
+import useFetch from '../components/useFetch.jsx';
+import Cards from "./Cards.jsx";
 
 const HeaderMoviesByGenres = () => {
   const genres = [
@@ -39,7 +15,7 @@ const HeaderMoviesByGenres = () => {
   ];
 
   const RenderMovies = ({ genre }) => {
-    const { data, isLoading, error } = useFetch(genre.id);
+    const { data, isLoading, error } = useFetch(`https://api.themoviedb.org/3/discover/movie?api_key=cd6592beb58e675d2cb6fdf038c87822&with_genres=${genre.id}`);
     
     if (isLoading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>;
@@ -47,16 +23,12 @@ const HeaderMoviesByGenres = () => {
     return (
       <div key={genre.id}>
         <div className='GenreMCOntainer'>
-        <h2 className='Genrename'>{genre.name}</h2>
-        <div className="genrescont">
-        {data.map(movie => (
-            <div key={movie.id} className="movieCard">
-              <Link to={`/MoviesDetails/${movie.id}`}><img className='moviecardimg' src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt={movie.title} /></Link>
-              <div className="iconWrapper"><div className="innerbord"></div></div>
-            </div>
-          ))}
-        </div>
-        
+          <h2 className='Genrename'>{genre.name}</h2>
+          <div className="genrescont">
+            {data.map(movie => (
+              <Cards key={movie.id} movie={movie} />
+            ))}
+          </div>
         </div>
       </div>
     );

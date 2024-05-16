@@ -3,10 +3,10 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../styles/HeaderCarousel.css';
-import HeaderCard from './HeaderCard';
 import useFetch from './useFetch'; 
 import '../assets/arrow-left-solid.svg'
 import '../assets/arrow-right-solid.svg'
+import Cards from './Cards';
 
 function HeaderCarousel() {
   const { data: movies, isLoading, error } = useFetch('https://api.themoviedb.org/3/discover/movie?api_key=cd6592beb58e675d2cb6fdf038c87822');
@@ -51,7 +51,7 @@ function HeaderCarousel() {
       {movies.length > 0 && ( 
         <Slider ref={sliderRef} {...settings}>
           {movies.map(movie => (
-            <HeaderCard key={movie.id} movie={movie} />
+            <Cards key={movie.id} movie={movie} />
           ))}
         </Slider>
       )}

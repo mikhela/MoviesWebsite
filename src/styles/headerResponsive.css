@@ -1,19 +1,41 @@
 @media only screen and (max-width: 1600px)
 {
   .GenreMCOntainer {
-    max-width: 1100px !important;
+    max-width: 1200px !important;
   }
-  
+  .MoviesPage__container
+  {
+      width: 1290px !important;
+  }
+}
+@media only screen and (max-width: 1315px)
+{
+  .MoviesPage__container
+  {
+      width: 1070px !important;
+  }
 }
 
 @media only screen and (max-width: 1120px)
 {
+  .MoviesPage__container
+  {
+      width: 850px !important;
+  }
   .GenreMCOntainer {
-     max-width: 657px !important;
+     max-width: 597px !important;
   }
 }
 @media only screen and (max-width: 1020px)
 {
+  .GenreMCOntainer
+  {
+    max-width: 630px !important;
+  }
+  .MoviesPage__container
+  {
+      width: 690px !important;
+  }
   .information__Container
   {
     width: 600px !important; 
@@ -53,6 +75,10 @@
 
 @media only screen and (max-width: 750px)
 {  
+  .MoviesPage__container
+  {
+      width: 435px !important;
+  }
   .information__Container
   {
     width: 450px !important; 
@@ -80,7 +106,7 @@
     width: 500px !important;
   }
   .GenreMCOntainer {
-    max-width: 500px !important;
+    max-width: 530px !important;
  }
  .Genrename{font-size: 22px;}
  .GenreMCOntainer .movieCard{ width: 150px;}
@@ -103,6 +129,10 @@
 
 @media only screen and (max-width: 540px)
 {
+  .MoviesPage__container
+  {
+      width: 330px !important;
+  }
   .information__Container
   {
     width: 400px !important; 
@@ -119,7 +149,7 @@
     width: 400px !important;
   }
   .GenreMCOntainer {
-    max-width: 330px !important;
+    max-width: 290px !important;
  }
   .GenreMCOntainer .Genrename{font-size: 20px !important;}
   .header--info #title {font-size: 14px;}

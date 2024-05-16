@@ -1,14 +1,16 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import useFetch from "../components/useFetch";
 export const MovieContext = createContext(null);
 
 
 const MovieContextProvider = (props) => {
+    const [movies, setMovies] = useState([]);
+
     const url = 'https://api.themoviedb.org/3/discover/movie?api_key=cd6592beb58e675d2cb6fdf038c87822';
 
     const { data } = useFetch(url);
 
-    const contextValue = { moviesData: data };
+    const contextValue = {  movies, setMovies };
 
     return (
         <MovieContext.Provider value={contextValue}>

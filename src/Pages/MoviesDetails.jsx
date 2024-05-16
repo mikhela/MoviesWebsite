@@ -3,11 +3,11 @@ import { MovieContext } from "../Context/MovieContext";
 import { useParams } from "react-router-dom";
 import "../styles/MoviesDetails.css"
 import ErrorPage from "./ErrorPage";
-import HeaderCarousel from "../components/HeaderCarousel.jsx"
+
 const MoviesDetails = () => {
-    const { moviesData } = useContext(MovieContext); 
+    const { movies } = useContext(MovieContext); 
     const { movieId } = useParams(); 
-    const movie = moviesData.find((movie) => movie.id === Number(movieId));
+    const movie = movies.find((movie) => movie.id === Number(movieId));
 
     return (
         <div>
