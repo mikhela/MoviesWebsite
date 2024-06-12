@@ -5,7 +5,7 @@ import HeaderInfo from '../components/HeaderInfo'
 import HeaderCarousel from '../components/HeaderCarousel'
 import HeaderBigBox from '../components/HeaderBigBox'
 import "../styles/HeaderResponsive.css"
-import Navbar from '../components/Navbar';
+
 const Home = () => {
     const [boxClicked, setBoxClicked] = useState(false);
 

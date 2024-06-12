@@ -1,9 +1,10 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import "../styles/HeaderBigBox.css";
-import HeaderCarousel from "./HeaderCarousel";
 import HeaderMoviesByGenres from "./HeaderMoviesByGenres";
+
+
 const HeaderBigBox = ({ onBoxClick }) => {
-    const [clicked, setClicked] = useState(false); // Typo is here
+    const [clicked, setClicked] = useState(false);
 
     const bigBoxRef = useRef(null);
 
