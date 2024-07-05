@@ -1,31 +1,52 @@
-.header--info
-{
-    max-width: 400px;
-    height: 400px;
-    position: fixed;
-    color: white;
-    top: 0px;
+.header--info {
+  width: 1200px;
+  max-width: 100%;
+  min-height: 600px;
+  position: relative;
+  margin: auto;
+  color: white;
+  display: flex;
+  gap: 30px;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 20px;
+  border-radius: 20px;
 }
 
-.information
-{
-    width: 100%;
-    height: 100%;
+.information {
+  width: 50%;
+  height: 100%;
+}
+.information .innerinformation {
+  width: 70%;
+}
+.information .innerBox {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
 }
 
-
-.information .innerBox
-{
-    display: flex;
-    gap: 30px;
-    margin-top: 13px;
+.information .innerinformation .overview {
+  margin-top: 40px;
 }
-.information .innerBox #vote {color: orange;}
-.information .innerBox #imdb
-{
-    padding: 3px;
-    background-color:  orange;
-    border-radius: 12px;
-    color: white;
+.information .innerBox #vote {
+  color: orange;
 }
-
+.information .innerBox #imdb {
+  padding: 3px;
+  background-color: orange;
+  border-radius: 12px;
+  color: white;
+}
+.header--info .left__image {
+  width: 50%;
+  height: 600px;
+  min-height: 100%;
+}
+.header--info .left__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}

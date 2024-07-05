@@ -1,10 +1,7 @@
-
 .carousel-container {
-    margin: 0 auto;
-    width: 97%;
-    height: 350px;
-    position: fixed;
-    bottom: 20px;
-  }
-  
- 
+  margin: 0 auto;
+  width: 97%;
+  height: 350px;
+  position: fixed;
+  bottom: 20px;
+}
