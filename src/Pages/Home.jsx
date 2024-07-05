@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../styles/Home.css";
 import ErrorBoundary from "../components/ErrorBoundary";
 import HeaderInfo from "../components/HeaderInfo";
-import HeaderCarousel from "../components/HeaderCarousel";
 import HeaderBigBox from "../components/HeaderBigBox";
 import "../styles/HeaderResponsive.css";
 
