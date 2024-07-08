@@ -8,21 +8,14 @@ const Movies = () => {
   const { movies, setMovies } = useContext(MovieContext);
   const [page, setPage] = useState(1);
   const { data: movieData, isLoading, error } = useFetch(`https://api.themoviedb.org/3/discover/movie?api_key=cd6592beb58e675d2cb6fdf038c87822&page=${page}`);
-  
-  const initialRender = useRef(true);
 
   useEffect(() => {
-    if (initialRender.current) {
-      initialRender.current = false;
-      return;
-    }
-
     if (movieData) {
-      // Ensure unique IDs by filtering out duplicates
       const newMovies = movieData.filter(newMovie => !movies.some(existingMovie => existingMovie.id === newMovie.id));
       setMovies(prevMovies => [...prevMovies, ...newMovies]);
     }
-  }, [movieData, setMovies]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [movieData]);
 
   const handleLoadMore = () => {
     setPage(prevPage => prevPage + 1);
