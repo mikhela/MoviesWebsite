@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useRef } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import HeaderCard from "../components/HeaderCard";
 import "../styles/Movies.css";
 import { MovieContext } from '../Context/MovieContext';
