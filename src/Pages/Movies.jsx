@@ -14,7 +14,8 @@ const Movies = () => {
       const newMovies = movieData.filter(newMovie => !movies.some(existingMovie => existingMovie.id === newMovie.id));
       setMovies(prevMovies => [...prevMovies, ...newMovies]);
     }
-  }, [movieData]);
+  }, [movieData, movies, setMovies]);
+  
 
   const handleLoadMore = () => {
     setPage(prevPage => prevPage + 1);
