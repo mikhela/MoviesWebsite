@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { MovieContext } from "../Context/MovieContext";
 import { useParams } from "react-router-dom";
 import "../styles/MoviesDetails.css"
-import ErrorPage from "./ErrorPage";
 
 const MoviesDetails = () => {
     const { movies } = useContext(MovieContext); 
@@ -11,7 +10,6 @@ const MoviesDetails = () => {
 
     return (
         <div>
-            {movie ? (
                 <div className="MoviesDetails">
                     <div className="movieBanner" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})` }}></div>
                     <div className="information__Container">
@@ -28,9 +26,7 @@ const MoviesDetails = () => {
                     </div>
 
                 </div>
-            ) : (
-                <ErrorPage />
-            )}
+         
         </div>
     );
 }

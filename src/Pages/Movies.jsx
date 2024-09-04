@@ -14,7 +14,6 @@ const Movies = () => {
       const newMovies = movieData.filter(newMovie => !movies.some(existingMovie => existingMovie.id === newMovie.id));
       setMovies(prevMovies => [...prevMovies, ...newMovies]);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [movieData]);
 
   const handleLoadMore = () => {
